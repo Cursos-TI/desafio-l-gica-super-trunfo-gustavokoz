@@ -107,51 +107,75 @@ int main() {
     5:PopulationDensity
     6:SuperPower
     */
-    printf("Comparação de Cartas:\n");
+    printf("Escolha qual dado deseja comparar:\n");
+    printf("População (digite 1)\n");
+    printf("Área (digite 2)\n");
+    printf("PIB (Digite 3)\n");
+    printf("Números de pontos turísticos (Digite 4)\n");
+    printf("PIB per Capita (Digite 5)\n");
+    printf("Densidade Populacional (digite 6)\n");
+    printf("Super Poder (Digite 7)\n");
+    printf("Digite sua primeira opcao:");
     int Comparator = 0; 
-    if(0 == Comparator){
+    scanf("%d",&Comparator);
+    printf("==========================================\n"); //separador de linha
+    switch (Comparator)
+    {
+    case 1:
 
         Winner = Population > Population2;
         printf("Carta 1 - %s %ld\n",PopulationText,Population);
         printf("Carta 2 - %s %ld\n",PopulationText,Population2);
+        break;
 
-    } else if(1 == Comparator){
+    case 2:
 
         Winner = Area > Area2;
         printf("Carta 1 - %s %d\n",AreaText,Area);
         printf("Carta 2 - %s %d\n",AreaText,Area2);
+        break;
 
-    } else if(2 == Comparator){
+    case 3:
 
         Winner = PIB > PIB2;
         printf("Carta 1 - %s %d\n",PIBText,PIB);
         printf("Carta 2 - %s %d\n",PIBText,PIB2);
+        break;
 
-    } else if(3 == Comparator){
+    case 4:
 
         Winner = PointsAttractions > PointsAttractions2;
         printf("Carta 1 - %s %d\n",PointsAttractionsText,PointsAttractions);
         printf("Carta 2 - %s %d\n",PointsAttractionsText,PointsAttractions2);
+        break;
 
-    } else if(4 == Comparator){
+    case 5:
 
         Winner =  PIBPerCapita > PIBPerCapita2;
         printf("Carta 1 - %s %.2f\n",PIBPerCapitaText,PIBPerCapita);
         printf("Carta 2 - %s %.2f\n",PIBPerCapitaText,PIBPerCapita2);
+        break;
 
-    } else if(5 == Comparator){
+    case 6:
 
         Winner = PopulationDensity2 > PopulationDensity;
         printf("Carta 1 - %s %.2f\n",PopulationDensityText,PopulationDensity);
         printf("Carta 2 - %s %.2f\n",PopulationDensityText,PopulationDensity2);
+        break;
 
-    } else if(6 == Comparator){
+    case 7:
 
         Winner = SuperPower > SuperPower2;
         printf("Carta 1 - %s %.2f\n",SuperPowerText,SuperPower);
         printf("Carta 2 - %s %.2f\n",SuperPowerText,SuperPower2);
+        break;    
 
-    };
+    default:
+
+        printf("Resposta Invalida");
+        break;
+
+    }
     // Definir ganhador
     if(Winner == 0){
 
