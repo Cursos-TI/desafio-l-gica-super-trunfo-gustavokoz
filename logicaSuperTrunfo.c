@@ -119,52 +119,53 @@ int main() {
     int Comparator = 0; 
     scanf("%d",&Comparator);
     printf("==========================================\n"); //separador de linha
+    int empate = 0;
     switch (Comparator)
     {
     case 1:
-
+        empate = Population == Population2;
         Winner = Population > Population2;
         printf("Carta 1 - %s %ld\n",PopulationText,Population);
         printf("Carta 2 - %s %ld\n",PopulationText,Population2);
         break;
 
     case 2:
-
+        empate = Area == Area2;
         Winner = Area > Area2;
         printf("Carta 1 - %s %d\n",AreaText,Area);
         printf("Carta 2 - %s %d\n",AreaText,Area2);
         break;
 
     case 3:
-
+        empate = PIB == PIB2;
         Winner = PIB > PIB2;
         printf("Carta 1 - %s %d\n",PIBText,PIB);
         printf("Carta 2 - %s %d\n",PIBText,PIB2);
         break;
 
     case 4:
-
+        empate = PointsAttractions == PointsAttractions2;
         Winner = PointsAttractions > PointsAttractions2;
         printf("Carta 1 - %s %d\n",PointsAttractionsText,PointsAttractions);
         printf("Carta 2 - %s %d\n",PointsAttractionsText,PointsAttractions2);
         break;
 
     case 5:
-
+        empate = PIBPerCapita == PIBPerCapita2;
         Winner =  PIBPerCapita > PIBPerCapita2;
         printf("Carta 1 - %s %.2f\n",PIBPerCapitaText,PIBPerCapita);
         printf("Carta 2 - %s %.2f\n",PIBPerCapitaText,PIBPerCapita2);
         break;
 
     case 6:
-
+        empate = PopulationDensity2 == PopulationDensity;
         Winner = PopulationDensity2 > PopulationDensity;
         printf("Carta 1 - %s %.2f\n",PopulationDensityText,PopulationDensity);
         printf("Carta 2 - %s %.2f\n",PopulationDensityText,PopulationDensity2);
         break;
 
     case 7:
-
+        empate = SuperPower == SuperPower2;
         Winner = SuperPower > SuperPower2;
         printf("Carta 1 - %s %.2f\n",SuperPowerText,SuperPower);
         printf("Carta 2 - %s %.2f\n",SuperPowerText,SuperPower2);
@@ -177,7 +178,11 @@ int main() {
 
     }
     // Definir ganhador
-    if(Winner == 0){
+    if(empate){
+
+        printf("Empate!\n");
+
+    } else if(Winner == 0){
 
         printf("Carta 2 ganhou\n");
 
