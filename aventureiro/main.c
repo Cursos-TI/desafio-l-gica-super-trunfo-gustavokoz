@@ -115,7 +115,7 @@ int main() {
     printf("PIB per Capita (Digite 5)\n");
     printf("Densidade Populacional (digite 6)\n");
     printf("Super Poder (Digite 7)\n");
-    printf("Digite sua primeira opcao:");
+    printf("Digite opcao:");
     int Comparator = 0; 
     scanf("%d",&Comparator);
     printf("==========================================\n"); //separador de linha
@@ -125,50 +125,50 @@ int main() {
     case 1:
         empate = Population == Population2;
         Winner = Population > Population2;
-        printf("Carta 1 - %s %ld\n",PopulationText,Population);
-        printf("Carta 2 - %s %ld\n",PopulationText,Population2);
+        printf("Carta 1(%s) - %s %ld\n",City,PopulationText,Population);
+        printf("Carta 2(%s) - %s %ld\n",City2,PopulationText,Population2);
         break;
 
     case 2:
         empate = Area == Area2;
         Winner = Area > Area2;
-        printf("Carta 1 - %s %d\n",AreaText,Area);
-        printf("Carta 2 - %s %d\n",AreaText,Area2);
+        printf("Carta 1(%s) - %s %d\n",City,AreaText,Area);
+        printf("Carta 2(%s) - %s %d\n",City2,AreaText,Area2);
         break;
 
     case 3:
         empate = PIB == PIB2;
         Winner = PIB > PIB2;
-        printf("Carta 1 - %s %d\n",PIBText,PIB);
-        printf("Carta 2 - %s %d\n",PIBText,PIB2);
+        printf("Carta 1(%s) - %s %d\n",City,PIBText,PIB);
+        printf("Carta 2(%s) - %s %d\n",City2,PIBText,PIB2);
         break;
 
     case 4:
         empate = PointsAttractions == PointsAttractions2;
         Winner = PointsAttractions > PointsAttractions2;
-        printf("Carta 1 - %s %d\n",PointsAttractionsText,PointsAttractions);
-        printf("Carta 2 - %s %d\n",PointsAttractionsText,PointsAttractions2);
+        printf("Carta 1(%s) - %s %d\n",City,PointsAttractionsText,PointsAttractions);
+        printf("Carta 2(%s) - %s %d\n",City2,PointsAttractionsText,PointsAttractions2);
         break;
 
     case 5:
         empate = PIBPerCapita == PIBPerCapita2;
         Winner =  PIBPerCapita > PIBPerCapita2;
-        printf("Carta 1 - %s %.2f\n",PIBPerCapitaText,PIBPerCapita);
-        printf("Carta 2 - %s %.2f\n",PIBPerCapitaText,PIBPerCapita2);
+        printf("Carta 1(%s) - %s %.2f\n",City,PIBPerCapitaText,PIBPerCapita);
+        printf("Carta 2(%s) - %s %.2f\n",City2,PIBPerCapitaText,PIBPerCapita2);
         break;
 
     case 6:
         empate = PopulationDensity2 == PopulationDensity;
         Winner = PopulationDensity2 > PopulationDensity;
-        printf("Carta 1 - %s %.2f\n",PopulationDensityText,PopulationDensity);
-        printf("Carta 2 - %s %.2f\n",PopulationDensityText,PopulationDensity2);
+        printf("Carta 1(%s) - %s %.2f\n",City,PopulationDensityText,PopulationDensity);
+        printf("Carta 2(%s) - %s %.2f\n",City2,PopulationDensityText,PopulationDensity2);
         break;
 
     case 7:
         empate = SuperPower == SuperPower2;
         Winner = SuperPower > SuperPower2;
-        printf("Carta 1 - %s %.2f\n",SuperPowerText,SuperPower);
-        printf("Carta 2 - %s %.2f\n",SuperPowerText,SuperPower2);
+        printf("Carta 1(%s) - %s %.2f\n",City,SuperPowerText,SuperPower);
+        printf("Carta 2(%s) - %s %.2f\n",City2,SuperPowerText,SuperPower2);
         break;    
 
     default:
